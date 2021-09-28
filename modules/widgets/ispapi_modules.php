@@ -23,7 +23,7 @@ use WHMCS\Session;
  */
 class IspapiModulesWidget extends \WHMCS\Module\AbstractWidget
 {
-    const VERSION = "2.2.1";
+    const VERSION = "2.3.0";
 
     protected $title = 'HEXONET Modules Overview';
     protected $description = '';

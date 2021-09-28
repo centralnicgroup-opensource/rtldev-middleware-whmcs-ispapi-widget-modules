@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/hexonet/whmcs-ispapi-widget-modules/compare/v2.2.1...v2.3.0) (2021-09-28)
+
+
+### Features
+
+* **UI:** compact review; TTFB improvements ([094b23e](https://github.com/hexonet/whmcs-ispapi-widget-modules/commit/094b23e57291aabe63140d5eb532fc468ca3e102))
+
 ## [2.2.1](https://github.com/hexonet/whmcs-ispapi-widget-modules/compare/v2.2.0...v2.2.1) (2021-07-08)
 
 
