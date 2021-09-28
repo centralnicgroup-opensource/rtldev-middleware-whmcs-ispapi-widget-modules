@@ -1,7 +1,7 @@
 {
   "ispapibackorder": {
     "repoid": "whmcs-ispapi-backorder",
-    "name": "Backorder Add-on",
+    "name": "Domain Drop-Catching Add-on",
     "type": "addon",
     "cleanup_files": ["/modules/addons/ispapibackorder"],
     "install_files": ["/modules/addons/ispapibackorder"],
@@ -31,7 +31,7 @@
   "ispapissl_addon": {
     "repoid": "whmcs-ispapi-ssl",
     "whmcsserverid": "ispapissl",
-    "name": "SSL Add-on",
+    "name": "SSLCert Add-on",
     "type": "addon",
     "cleanup_files": [
       "/modules/addons/ispapissl_addon",
@@ -48,7 +48,7 @@
   },
   "ispapidomaincheck": {
     "repoid": "whmcs-ispapi-domainchecker",
-    "name": "Domain Checker Add-on",
+    "name": "Domain Search Add-on",
     "type": "addon",
     "deprecated": {
       "notice": "Module is replaced by our new one that also allows for Domain Imports of other CentralNic Brands.",
@@ -64,10 +64,10 @@
   },
   "ispapidpi": {
     "repoid": "whmcs-ispapi-pricingimporter",
-    "name": "Price Importer Add-on",
+    "name": "Pricing Importer Add-on",
     "type": "addon",
     "deprecated": {
-      "notice": "Module is no longer maintained as of the new \"Registrar TLD Sync Feature\" Feature of WHMCS. ",
+      "notice": "Module is no longer maintained as of the new \"Registrar TLD Sync Feature\" Feature of WHMCS.",
       "url": "https://docs.whmcs.com/Registrar_TLD_Sync",
       "case": "whmcs",
       "whmcs_version": "7.10.0",
@@ -106,7 +106,7 @@
   },
   "ispapiwidgetaccount": {
     "repoid": "whmcs-ispapi-widget-account",
-    "name": "Account Widget",
+    "name": "Account Overview Widget",
     "type": "widget",
     "cleanup_files": ["/modules/widgets/ispapi_account.php"],
     "install_files": ["/modules/widgets/ispapi_account.php"],
@@ -117,7 +117,7 @@
   },
   "ispapiwidgetmodules": {
     "repoid": "whmcs-ispapi-widget-modules",
-    "name": "Modules Widget",
+    "name": "Modules Overview Widget",
     "type": "widget",
     "cleanup_files": ["/modules/widgets/ispapi_modules.php"],
     "install_files": ["/modules/widgets/ispapi_modules.php"],
@@ -125,7 +125,7 @@
   },
   "ispapiwidgetmonitoring": {
     "repoid": "whmcs-ispapi-widget-monitoring",
-    "name": "Monitoring Widget",
+    "name": "Domain Monitoring Widget",
     "type": "widget",
     "cleanup_files": ["/modules/widgets/ispapi_monitoring.php"],
     "install_files": ["/modules/widgets/ispapi_monitoring.php"],
