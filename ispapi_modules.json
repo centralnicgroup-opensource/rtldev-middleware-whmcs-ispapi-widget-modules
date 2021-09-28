@@ -50,11 +50,6 @@
     "repoid": "whmcs-ispapi-domainchecker",
     "name": "Domain Search Add-on",
     "type": "addon",
-    "deprecated": {
-      "notice": "Module is replaced by our new one that also allows for Domain Imports of other CentralNic Brands.",
-      "case": "replaced",
-      "replacementurl": "https://centralnic-reseller.github.io/centralnic-reseller/docs/hexonet/whmcs/whmcs-domainimporter/"
-    },
     "cleanup_files": ["/modules/addons/ispapidomaincheck"],
     "install_files": ["/modules/addons/ispapidomaincheck"],
     "dependencies": {
