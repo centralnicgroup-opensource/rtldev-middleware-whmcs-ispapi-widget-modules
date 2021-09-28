@@ -1,7 +1,7 @@
 {
   "ispapibackorder": {
     "repoid": "whmcs-ispapi-backorder",
-    "name": "Domain Drop-Catching Add-on",
+    "name": "Drop-Catching Add-on",
     "type": "addon",
     "cleanup_files": ["/modules/addons/ispapibackorder"],
     "install_files": ["/modules/addons/ispapibackorder"],
