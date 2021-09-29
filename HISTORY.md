@@ -1,3 +1,10 @@
+## [2.3.1](https://github.com/hexonet/whmcs-ispapi-widget-modules/compare/v2.3.0...v2.3.1) (2021-09-29)
+
+
+### Bug Fixes
+
+* **session handling:** reviewed to avoid php warnings ([d453a43](https://github.com/hexonet/whmcs-ispapi-widget-modules/commit/d453a43841dc4c9d466faf2f4aef675e8bc3ee80))
+
 # [2.3.0](https://github.com/hexonet/whmcs-ispapi-widget-modules/compare/v2.2.1...v2.3.0) (2021-09-28)
 
 
