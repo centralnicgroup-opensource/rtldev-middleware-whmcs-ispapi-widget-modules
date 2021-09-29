@@ -16,7 +16,6 @@ namespace WHMCS\Module\Widget;
 
 use App;
 use WHMCS\Config\Setting;
-use WHMCS\Session;
 
 /**
  * ISPAPI Modules Widget.
@@ -41,8 +40,9 @@ class IspapiModulesWidget extends \WHMCS\Module\AbstractWidget
      */
     public function getData()
     {
-        $session = new Session();
-        $session->create(Setting::getValue("InstanceID"));
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
 
         $id = self::$widgetid;
 
