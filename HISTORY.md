@@ -1,3 +1,10 @@
+## [2.3.2](https://github.com/hexonet/whmcs-ispapi-widget-modules/compare/v2.3.1...v2.3.2) (2021-12-06)
+
+
+### Bug Fixes
+
+* **css:** add min-width for icons column ([728d98a](https://github.com/hexonet/whmcs-ispapi-widget-modules/commit/728d98a44f2802cc1fabd62ab4fe8dc6da4476db))
+
 ## [2.3.1](https://github.com/hexonet/whmcs-ispapi-widget-modules/compare/v2.3.0...v2.3.1) (2021-09-29)
 
 
