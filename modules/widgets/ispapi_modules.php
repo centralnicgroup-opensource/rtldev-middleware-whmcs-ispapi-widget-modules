@@ -946,6 +946,7 @@ add_hook('AdminAreaHeadOutput', 1, function ($vars) {
             }
             .hxmwTable th:nth-of-type(3) {/*icons*/
                 width: 70px;
+                min-width: 70px;
             }
             .hxmwTable th:nth-of-type(4) {/* used */
                 width: 110px;
