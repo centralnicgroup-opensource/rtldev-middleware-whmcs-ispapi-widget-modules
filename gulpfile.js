@@ -1,8 +1,6 @@
 const { series, src, dest } = require("gulp");
 const clean = require("gulp-clean");
 const zip = require("gulp-zip");
-const tar = require("gulp-tar");
-const gzip = require("gulp-gzip");
 const exec = require("util").promisify(require("child_process").exec);
 const cfg = require("./gulpfile.json");
 
@@ -82,24 +80,13 @@ function doZip() {
     .pipe(dest("./pkg"));
 }
 
-/**
- * build tar archive
- * @return stream
- */
-function doTar() {
-  return src(`./${cfg.archiveBuildPath}/**`)
-    .pipe(tar(`${cfg.archiveFileName}.tar`))
-    .pipe(gzip())
-    .pipe(dest("./pkg"));
-}
-
 exports.lint = doLint;
 
 exports.copy = series(doDistClean, doCopyFiles);
 
 exports.prepare = series(exports.lint, exports.copy);
 
-exports.archives = series(doGitZip, doZip, doTar);
+exports.archives = series(doGitZip, doZip);
 
 exports.default = series(exports.prepare, exports.archives, doFullClean);
 exports.release = series(exports.copy, exports.archives, doFullClean);
