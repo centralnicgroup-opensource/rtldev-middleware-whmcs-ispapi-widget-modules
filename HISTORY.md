@@ -1,3 +1,10 @@
+## [2.3.4](https://github.com/hexonet/whmcs-ispapi-widget-modules/compare/v2.3.3...v2.3.4) (2022-07-05)
+
+
+### Bug Fixes
+
+* **json config:** patched static url ([1b9ff90](https://github.com/hexonet/whmcs-ispapi-widget-modules/commit/1b9ff9092182958689bb6c3f9d77bd51c24c778c))
+
 ## [2.3.3](https://github.com/hexonet/whmcs-ispapi-widget-modules/compare/v2.3.2...v2.3.3) (2022-07-05)
 
 

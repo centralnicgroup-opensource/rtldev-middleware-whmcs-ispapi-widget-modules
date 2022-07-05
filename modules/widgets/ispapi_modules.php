@@ -22,7 +22,7 @@ use WHMCS\Config\Setting;
  */
 class IspapiModulesWidget extends \WHMCS\Module\AbstractWidget
 {
-    const VERSION = "2.3.3";
+    const VERSION = "2.3.4";
 
     protected $title = 'HEXONET Modules Overview';
     protected $description = '';
