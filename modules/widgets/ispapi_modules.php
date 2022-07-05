@@ -240,7 +240,7 @@ class IspapiModuleFactory
                 CURLOPT_HEADER => 0,
                 CURLOPT_RETURNTRANSFER => 1,
                 CURLOPT_USERAGENT => "ISPAPI MODULES WIDGET",
-                CURLOPT_URL => "https://raw.githubusercontent.com/hexonet/whmcs-ispapi-widget-modules/modules-deprecated/ispapi_modules.json?ts=" . time(),
+                CURLOPT_URL => "https://raw.githubusercontent.com/hexonet/whmcs-ispapi-widget-modules/master/ispapi_modules.json",
                 CURLOPT_HTTPHEADER => ["Cache-Control: no-cache, must-revalidate"]
             ]);
             $cdata = curl_exec($ch);
