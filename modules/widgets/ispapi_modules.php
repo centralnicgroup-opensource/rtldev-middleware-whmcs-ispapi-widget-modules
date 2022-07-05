@@ -50,7 +50,7 @@ class IspapiModulesWidget extends \WHMCS\Module\AbstractWidget
         $status = \App::getFromRequest("status");
         if ($status !== "") {
             $status = (int)$status;
-            if (in_array($status, [0,1])) {
+            if (in_array($status, [0, 1])) {
                 Setting::setValue($id . "status", $status);
             }
         }
@@ -83,7 +83,7 @@ class IspapiModulesWidget extends \WHMCS\Module\AbstractWidget
         ) {
             $_SESSION[$id] = [
                 "expires" => time() + self::$sessionttl,
-                "ttl" =>  + self::$sessionttl
+                "ttl" =>  +self::$sessionttl
             ];
         }
         return array_merge($data, [
@@ -240,7 +240,7 @@ class IspapiModuleFactory
                 CURLOPT_HEADER => 0,
                 CURLOPT_RETURNTRANSFER => 1,
                 CURLOPT_USERAGENT => "ISPAPI MODULES WIDGET",
-                CURLOPT_URL => "https://raw.githubusercontent.com/hexonet/whmcs-ispapi-widget-modules/master/ispapi_modules.json",
+                CURLOPT_URL => "https://raw.githubusercontent.com/hexonet/whmcs-ispapi-widget-modules/modules-deprecated/ispapi_modules.json?ts=" . time(),
                 CURLOPT_HTTPHEADER => ["Cache-Control: no-cache, must-revalidate"]
             ]);
             $cdata = curl_exec($ch);
@@ -270,7 +270,7 @@ class IspapiModuleFactory
                 self::addToModuleGroup($mod);
             }
         }
-        uasort(self::$moduleGroups, [ IspapiModuleGroup::class, "orderByPriority"]);
+        uasort(self::$moduleGroups, [IspapiModuleGroup::class, "orderByPriority"]);
         return self::$moduleGroups;
     }
 
@@ -556,8 +556,7 @@ class IspapiModule
     public function isStandardDeprecation()
     {
         $key = strtolower(self::STATUS_DEPRECATED);
-        return (
-            $this->isDeprecated()
+        return ($this->isDeprecated()
             && $this->data[$key] === true
         );
     }
@@ -565,8 +564,7 @@ class IspapiModule
     public function isProductDeprecation()
     {
         $key = strtolower(self::STATUS_DEPRECATED);
-        return (
-            $this->isDeprecated()
+        return ($this->isDeprecated()
             && isset($this->data[$key]["case"])
             && $this->data[$key]["case"] === "product"
         );
@@ -575,8 +573,7 @@ class IspapiModule
     public function isWhmcsDeprecation()
     {
         $key = strtolower(self::STATUS_DEPRECATED);
-        return (
-            $this->isDeprecated()
+        return ($this->isDeprecated()
             && isset($this->data[$key]["case"])
             && $this->data[$key]["case"] === "whmcs"
         );
@@ -787,7 +784,8 @@ class IspapiModule
     public function getGitHubLink($raw = false)
     {
         $hostname = $raw ? "raw.githubusercontent.com" : "github.com";
-        return "https://{$hostname}/hexonet/{$this->data["repoid"]}";
+        $organization = $this->data['organization'] ?? "hexonet";
+        return "https://{$hostname}/{$organization}/{$this->data["repoid"]}";
     }
 
     /**
@@ -796,7 +794,8 @@ class IspapiModule
      */
     public function getDownloadLink()
     {
-        return ($this->getGitHubLink() . "/raw/master/{$this->data["repoid"]}-latest.zip");
+        $downloadUrl = $this->data['download_url'] ?? $this->getGitHubLink() . "/raw/master/{$this->data["repoid"]}-latest.zip";
+        return $downloadUrl;
     }
 }
 

@@ -49,10 +49,5 @@
     "gulp-clean": "^0.4.0",
     "gulp-zip": "^5.0.2",
     "semantic-release": "^19.0.3"
-  },
-  "scripts": {
-    "phpCompatibility": "./scripts/phpcompatibility.sh",
-    "codeCheck": "phpcs --standard=PSR12 -s -q -n --colors ispapi_modules.php",
-    "codeFix": "phpcbf --standard=PSR12 -s -q ispapi_modules.php"
   }
 }
