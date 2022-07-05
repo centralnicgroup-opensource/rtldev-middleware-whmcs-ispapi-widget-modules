@@ -1,50 +1,11 @@
 {
-  "ispapibackorder": {
-    "repoid": "whmcs-ispapi-backorder",
-    "name": "Drop-Catching Add-on",
-    "type": "addon",
-    "cleanup_files": ["/modules/addons/ispapibackorder"],
-    "install_files": ["/modules/addons/ispapibackorder"],
-    "dependencies": {
-      "required": ["ispapi"]
-    },
-    "prio": 8
-  },
-  "ispapipremiumdns_addon": {
-    "repoid": "whmcs-ispapi-premiumdns",
-    "whmcsserverid": "ispapipremiumdns",
-    "name": "Premium DNS Addon",
-    "type": "addon",
-    "deprecated": {
-      "case": "product",
-      "notice": "Product stopped on 1st of April 2021. You can still manage your existing Premium DNS Zones and their Resource Records. Ordering new ones will fail.",
-      "url": "https://www.hexonet.net/blog/dns-to-serve-you-better",
-      "replacementurl": "https://centralnic-reseller.github.io/centralnic-reseller/docs/hexonet/whmcs/whmcs-dns/"
-    },
-    "dependencies": {
-      "required": ["ispapi"]
-    },
-    "cleanup_files": ["/modules/addons/ispapipremiumdns"],
-    "install_files": ["/modules/addons/ispapipremiumdns"],
-    "prio": 6
-  },
-  "ispapissl_addon": {
-    "repoid": "whmcs-ispapi-ssl",
-    "whmcsserverid": "ispapissl",
-    "name": "SSLCert Add-on",
-    "type": "addon",
-    "cleanup_files": [
-      "/modules/addons/ispapissl_addon",
-      "/modules/servers/ispapissl"
-    ],
-    "install_files": [
-      "/modules/addons/ispapissl_addon",
-      "/modules/servers/ispapissl"
-    ],
-    "dependencies": {
-      "required": ["ispapi"]
-    },
-    "prio": 7
+  "ispapi": {
+    "repoid": "whmcs-ispapi-registrar",
+    "name": "Registrar Module",
+    "type": "registrar",
+    "cleanup_files": ["/modules/registrars/ispapi"],
+    "install_files": ["/modules/registrars/ispapi"],
+    "prio": 10
   },
   "ispapidomaincheck": {
     "repoid": "whmcs-ispapi-domainchecker",
@@ -57,47 +18,40 @@
     },
     "prio": 9
   },
-  "ispapidpi": {
-    "repoid": "whmcs-ispapi-pricingimporter",
-    "name": "Pricing Importer Add-on",
+ 
+  "cnicssl_addon": {
+    "repoid": "whmcs-ssl",
+    "whmcsserverid": "cnicssl",
+    "organization": "centralnic-reseller",
+    "download_url": "https://github.com/centralnic-reseller/whmcs-ssl/raw/master/whmcs-cnic-ssl-latest.zip",
+    "name": "SSLCert Add-on",
     "type": "addon",
-    "deprecated": {
-      "notice": "Module is no longer maintained as of the new \"Registrar TLD Sync Feature\" Feature of WHMCS.",
-      "url": "https://docs.whmcs.com/Registrar_TLD_Sync",
-      "case": "whmcs",
-      "whmcs_version": "7.10.0",
-      "replacementurl": "https://centralnic-reseller.github.io/centralnic-reseller/docs/hexonet/whmcs/whmcs-ispapi-registrar/#importing-prices"
-    },
-    "cleanup_files": ["/modules/addons/ispapidpi"],
-    "install_files": ["/modules/addons/ispapidpi"],
+    "cleanup_files": [
+      "/modules/addons/cnicssl_addon",
+      "/modules/servers/cnicssl"
+    ],
+    "install_files": [
+      "/modules/addons/cnicssl_addon",
+      "/modules/servers/cnicssl"
+    ],
     "dependencies": {
       "required": ["ispapi"]
     },
-    "prio": 5
+    "prio": 8
   },
-  "ispapi": {
-    "repoid": "whmcs-ispapi-registrar",
-    "name": "Registrar Module",
-    "type": "registrar",
-    "cleanup_files": ["/modules/registrars/ispapi"],
-    "install_files": ["/modules/registrars/ispapi"],
-    "prio": 10
-  },
-  "ispapidomainimport": {
-    "repoid": "whmcs-ispapi-domainimport",
-    "name": "Domain Importer Add-on",
+  "cnicdomainimport": {
+    "repoid": "whmcs-domainimporter",
+    "whmcsserverid": "cnicdomainimport",
+    "organization": "centralnic-reseller",
+    "download_url": "https://github.com/centralnic-reseller/whmcs-domainimporter/raw/master/whmcs-cnic-domainimport-latest.zip",
+    "name": "WHMCS Import Module",
     "type": "addon",
-    "deprecated": {
-      "notice": "Module is replaced by our new one that also allows for Domain Imports of other CentralNic Brands.",
-      "case": "replaced",
-      "replacementurl": "https://centralnic-reseller.github.io/centralnic-reseller/docs/hexonet/whmcs/whmcs-domainimporter/"
-    },
-    "cleanup_files": ["/modules/addons/ispapidomainimport"],
-    "install_files": ["/modules/addons/ispapidomainimport"],
+    "cleanup_files": ["/modules/addons/cnicdomainimport"],
+    "install_files": ["/modules/addons/cnicdomainimport"],
     "dependencies": {
       "required": ["ispapi"]
     },
-    "prio": 4
+    "prio": 7
   },
   "ispapiwidgetaccount": {
     "repoid": "whmcs-ispapi-widget-account",
@@ -108,15 +62,7 @@
     "dependencies": {
       "required": ["ispapi"]
     },
-    "prio": 2
-  },
-  "ispapiwidgetmodules": {
-    "repoid": "whmcs-ispapi-widget-modules",
-    "name": "Modules Overview Widget",
-    "type": "widget",
-    "cleanup_files": ["/modules/widgets/ispapi_modules.php"],
-    "install_files": ["/modules/widgets/ispapi_modules.php"],
-    "prio": 0
+    "prio": 6
   },
   "ispapiwidgetmonitoring": {
     "repoid": "whmcs-ispapi-widget-monitoring",
@@ -127,6 +73,28 @@
     "dependencies": {
       "required": ["ispapi"]
     },
-    "prio": 1
+    "prio": 5
+  },
+  "ispapiwidgetmodules": {
+    "repoid": "whmcs-ispapi-widget-modules",
+    "name": "Modules Overview Widget",
+    "type": "widget",
+    "cleanup_files": ["/modules/widgets/ispapi_modules.php"],
+    "install_files": ["/modules/widgets/ispapi_modules.php"],
+    "prio": 4
+  },
+  "cnicdns": {
+    "repoid": "whmcs-dns",
+    "whmcsserverid": "cnicdns",
+    "organization": "centralnic-reseller",
+    "download_url": "https://github.com/centralnic-reseller/whmcs-dns/raw/master/whmcs-cnic-dns-latest.zip",
+    "name": "WHMCS DNS Module",
+    "type": "addon",
+    "cleanup_files": ["/modules/addons/cnicdns"],
+    "install_files": ["/modules/addons/cnicdns"],
+    "dependencies": {
+      "required": ["ispapi"]
+    },
+    "prio": 3
   }
 }
