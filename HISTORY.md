@@ -1,3 +1,10 @@
+## [2.3.3](https://github.com/hexonet/whmcs-ispapi-widget-modules/compare/v2.3.2...v2.3.3) (2022-07-05)
+
+
+### Bug Fixes
+
+* **ispapi_modules.json:** modules added/removed ([8846912](https://github.com/hexonet/whmcs-ispapi-widget-modules/commit/8846912791bc181cf74e4c34f3e24dddece1d2f9))
+
 ## [2.3.2](https://github.com/hexonet/whmcs-ispapi-widget-modules/compare/v2.3.1...v2.3.2) (2021-12-06)
 
 
